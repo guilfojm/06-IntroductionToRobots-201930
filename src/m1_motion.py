@@ -71,42 +71,48 @@ def run_test_go(robot):
     # -------------------------------------------------------------------------
     # DONE: 3. Implement this.
     # -------------------------------------------------------------------------
-    robot.drive_system.left_motor.turn_on(25)
-    robot.drive_system.right_motor.turn_on(25)
-    time.sleep(2)
-    robot.drive_system.left_motor.turn_off()
-    robot.drive_system.right_motor.turn_off()
-    time.sleep(2)
-
-    robot.drive_system.left_motor.turn_on(50)
-    robot.drive_system.right_motor.turn_on(50)
-    time.sleep(4)
-    robot.drive_system.left_motor.turn_off()
-    robot.drive_system.right_motor.turn_off()
-    time.sleep(2)
-
-    robot.drive_system.left_motor.turn_on(75)
-    robot.drive_system.right_motor.turn_on(75)
-    time.sleep(6)
-    robot.drive_system.left_motor.turn_off()
-    robot.drive_system.right_motor.turn_off()
-    time.sleep(2)
-
-    robot.drive_system.left_motor.turn_on(100)
-    robot.drive_system.right_motor.turn_on(100)
-    time.sleep(8)
-    robot.drive_system.left_motor.turn_off()
-    robot.drive_system.right_motor.turn_off()
-    time.sleep(2)
+    # robot.drive_system.left_motor.turn_on(25)
+    # robot.drive_system.right_motor.turn_on(25)
+    # time.sleep(2)
+    # robot.drive_system.left_motor.turn_off()
+    # robot.drive_system.right_motor.turn_off()
+    # time.sleep(2)
+    #
+    # robot.drive_system.left_motor.turn_on(50)
+    # robot.drive_system.right_motor.turn_on(50)
+    # time.sleep(4)
+    # robot.drive_system.left_motor.turn_off()
+    # robot.drive_system.right_motor.turn_off()
+    # time.sleep(2)
+    #
+    # robot.drive_system.left_motor.turn_on(75)
+    # robot.drive_system.right_motor.turn_on(75)
+    # time.sleep(6)
+    # robot.drive_system.left_motor.turn_off()
+    # robot.drive_system.right_motor.turn_off()
+    # time.sleep(2)
+    #
+    # robot.drive_system.left_motor.turn_on(100)
+    # robot.drive_system.right_motor.turn_on(100)
+    # time.sleep(8)
+    # robot.drive_system.left_motor.turn_off()
+    # robot.drive_system.right_motor.turn_off()
+    # time.sleep(2)
+    go(robot, 10, 25, 50)
+    go(robot, 5, 30, 60)
 
 def go(robot, seconds, left_wheel_speed, right_wheel_speed):
     """ :type robot: rb.RoseBot """
     # -------------------------------------------------------------------------
-    # TODO: 6.
+    # DONE: 6.
     #   Make the robot go, by using the pattern from SPIN function, except
     #   using the given speeds for the left and right wheels, respectively.
     # -------------------------------------------------------------------------
-    
+    robot.drive_system.left_motor.turn_on(left_wheel_speed)
+    robot.drive_system.right_motor.turn_on(right_wheel_speed)
+    time.sleep(seconds)
+    robot.drive_system.left_motor.turn_off()
+    robot.drive_system.right_motor.turn_off()
 
 def challenge1(robot):
     """ Your instructor will tell you this challenge. """
